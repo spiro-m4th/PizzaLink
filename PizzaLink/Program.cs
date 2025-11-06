@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using PizzaLink.Views;
 using System.Windows.Forms;
 
 namespace PizzaLink
@@ -16,7 +14,7 @@ namespace PizzaLink
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmLogin());    //iniciar o app na tela de Login
         }
     }
 }

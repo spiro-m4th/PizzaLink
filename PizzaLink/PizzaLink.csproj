@@ -57,6 +57,19 @@
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Services\DataBaseSqlServer.cs" />
+    <Compile Include="Services\SessaoUsuario.cs" />
+    <Compile Include="Views\frmCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmCadastroUsuario.Designer.cs">
+      <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

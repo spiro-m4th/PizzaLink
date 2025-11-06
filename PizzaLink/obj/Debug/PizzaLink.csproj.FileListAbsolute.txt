@@ -7,3 +7,4 @@ C:\Foxxit\source\PizzaLink\PizzaLink\bin\Debug\PizzaLink.exe
 C:\Foxxit\source\PizzaLink\PizzaLink\bin\Debug\PizzaLink.pdb
 C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.exe
 C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.pdb
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.exe.config
