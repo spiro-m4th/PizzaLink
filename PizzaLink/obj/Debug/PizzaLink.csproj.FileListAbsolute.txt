@@ -1,0 +1,9 @@
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.csproj.AssemblyReference.cache
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Properties.Resources.resources
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.csproj.GenerateResource.cache
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.csproj.CoreCompileInputs.cache
+C:\Foxxit\source\PizzaLink\PizzaLink\bin\Debug\PizzaLink.exe.config
+C:\Foxxit\source\PizzaLink\PizzaLink\bin\Debug\PizzaLink.exe
+C:\Foxxit\source\PizzaLink\PizzaLink\bin\Debug\PizzaLink.pdb
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.exe
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.pdb
