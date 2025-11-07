@@ -67,6 +67,7 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(36, 101);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(345, 20);
             this.txtSenha.TabIndex = 3;
             // 
@@ -78,6 +79,7 @@
             this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnSair
             // 
@@ -87,6 +89,7 @@
             this.btnSair.TabIndex = 5;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // lnkCadastreSe
             // 
@@ -97,7 +100,7 @@
             this.lnkCadastreSe.TabIndex = 6;
             this.lnkCadastreSe.TabStop = true;
             this.lnkCadastreSe.Text = "Não possui cadastro?";
-            this.lnkCadastreSe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCadastreSe_Click);
+            this.lnkCadastreSe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCadastreSe_Clicked);
             // 
             // panel1
             // 
@@ -107,7 +110,7 @@
             this.panel1.Size = new System.Drawing.Size(406, 185);
             this.panel1.TabIndex = 7;
             // 
-            // frmLogin
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,9 +123,10 @@
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.panel1);
-            this.Name = "frmLogin";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entrar/ Sair";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

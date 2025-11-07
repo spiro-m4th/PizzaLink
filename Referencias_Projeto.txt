@@ -1,0 +1,42 @@
+// REFERÊNCIAS
+// OBS: Como o código foi construido com o intuito de aplicar conceitos de MVC e CRUD, não foi dado ênfase em aplicar códigos contra vulnerabilidades (como SQL Injection por exemplo).
+// https://learn.microsoft.com/pt-br/sql/relational-databases/security/sql-injection?view=sql-server-ver17
+
+
+// REFERÊNCIAS DE CÓDIGOS APLICADOS EM CONTROLLERS:
+
+// https://learn.microsoft.com/pt-br/dotnet/api/system.dbnull.value?view=net-9.0 - determinar se um campo de banco de dados em um banco de dados em lista tem um valor especifico válido
+
+// sobre a classe tables: https://learn.microsoft.com/pt-br/dotnet/api/system.data.datatable?view=net-9.0
+
+// mapeamento de dados em decimal: https://learn.microsoft.com/pt-br/dotnet/framework/data/adonet/sql-server-data-type-mappings
+
+// para realizar consultas dentro de um loop: https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping
+
+// convertendo valores para 'char': https://learn.microsoft.com/pt-br/dotnet/api/system.convert.tochar?view=net-8.0
+
+
+//REFERÊNCIAS PARA IMPLEMENTAÇÃO DE TELA DE LOGIN:
+//(aplicados em UsuarioController e SessaoUsuario.Services)
+
+// boas práticas de segurança em métodos de Autenticação: https://learn.microsoft.com/pt-br/aspnet/core/security/authentication/?view=aspnetcore-9.0
+
+// jeito correto de se armazenar senhas em banco de dados: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+
+// retringindo acessibilidade: https://learn.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility
+
+// https://stackoverflow.com/questions/519520/difference-between-static-class-and-singleton-pattern
+
+// (não utilizei no código) armazenamento de senhas em formato de HASH: https://learn.microsoft.com/pt-br/aspnet/core/security/data-protection/consumer-apis/password-hashing?view=aspnetcore-9.0
+
+// (não utilizei no código) vulnerabilidades em databases e outros: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+
+
+//REFERÊNCIAS PARA SERVICE DataBaseSqlServer.cs e MODELS
+
+// https://github.com/alberto-Lucas/25POOB/tree/main/ProjetoExemploCerto
+
+
+
+
+
