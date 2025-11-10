@@ -8,9 +8,11 @@ C:\Foxxit\source\PizzaLink\PizzaLink\bin\Debug\PizzaLink.pdb
 C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.exe
 C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.pdb
 C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmCadastroUsuario.resources
-C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.FormLogin.resources
-C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.frmPrincipal.resources
 C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.exe.config
 C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmCadastroCliente.resources
 C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmPrincipal.resources
 C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmSelecionaCliente.resources
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmSelecionaUsuario.resources
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmCadastroProduto.resources
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmNovoPedido.resources
+C:\Foxxit\source\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmSelecionaProduto.resources

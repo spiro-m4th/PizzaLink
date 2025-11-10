@@ -14,7 +14,7 @@ namespace PizzaLink
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());    //iniciar o app na tela de Login
+            Application.Run(new frmPrincipal());    //iniciar o app na tela de Login
         }
     }
 }

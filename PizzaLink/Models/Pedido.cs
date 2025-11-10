@@ -7,22 +7,21 @@ namespace PizzaLink.Models
     {
         public int PedidoId { get; set; }
         public DateTime DataHora { get; set; }
-        public Usuario Usuario { get; set; } // Relacionamento com Usuário
-        public Cliente Cliente { get; set; } // Relacionamento com Cliente
+        public Usuario Usuario { get; set; } //relacionamento com a classe Usuário
+        public Cliente Cliente { get; set; } //" cliente
         public decimal ValorTotal { get; set; }
         public char Status { get; set; }
 
-        // Lista essencial para o Controller
-        // Vai guardar os itens antes de salvar no banco
+        //lista essencial para o Controller
+        //vai guardar os itens antes de salvar no banco
         public List<ItemPedido> ItensDoPedido { get; set; }
 
-        //Inicializar a lista
+        //inicializar a lista
         public Pedido()
         {
             this.ItensDoPedido = new List<ItemPedido>();
         }
 
-        // Propriedade tratada
         public string StatusTratado
         {
             get
@@ -37,5 +36,8 @@ namespace PizzaLink.Models
             }
         }
     }
-    public class PedidoCollection : List<Pedido> { }
+    public class PedidoCollection : List<Pedido> 
+    { 
+    
+    }
 }

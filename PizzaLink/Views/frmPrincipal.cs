@@ -8,13 +8,17 @@ namespace PizzaLink.Views
         public frmPrincipal()
         {
             InitializeComponent();
-            // Garanta que 'IsMdiContainer' esteja FALSO nas propriedades
         }
 
-        // --- CADASTROS ---
+        //CADASTROS
+        private void menuUsuarios_Click(object sender, EventArgs e)
+        {
+            frmSelecionaUsuario frm = new frmSelecionaUsuario();
+            frm.ShowDialog();
+        }
+
         private void menuClientes_Click(object sender, EventArgs e)
         {
-            // O padrão é abrir a tela de seleção, não a de cadastro
             frmSelecionaCliente frm = new frmSelecionaCliente();
             frm.ShowDialog();
         }
@@ -25,31 +29,29 @@ namespace PizzaLink.Views
             frm.ShowDialog();
         }
 
-        private void menuUsuarios_Click(object sender, EventArgs e)
-        {
-            frmSelecaoUsuario frm = new frmSelecaoUsuario();
-            frm.ShowDialog();
-        }
-
-        // --- MOVIMENTAÇÃO ---
+        //MOVIMENTACAO
         private void menuNovoPedido_Click(object sender, EventArgs e)
         {
             frmNovoPedido frm = new frmNovoPedido();
             frm.ShowDialog();
         }
 
-        // --- CONSULTA ---
+        //CONSULTAS
         private void menuConsultarPedidos_Click(object sender, EventArgs e)
         {
-            // O Padrão 3 (frmPedidoHistorico) é a tela de consulta
-            frmSelecaoPedido frm = new frmSelecaoPedido();
+            frmSelecionaPedido frm = new frmSelecionaPedido();
             frm.ShowDialog();
         }
 
-        // --- SAIR ---
+        //SAIR
         private void menuSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = MessageBox.Show("Deseja realmente finalizar o app?", "CONFIRMAÇÃO", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (resultado == DialogResult.Yes)
+                this.Close();
+            else
+            return;
         }
     }
+
 }

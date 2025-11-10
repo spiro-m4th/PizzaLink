@@ -10,7 +10,7 @@ namespace PizzaLink.Models
         public string Senha { get; set; } 
         public char NivelAcesso { get; set; }
 
-        //Traduzir ou interpretar o valor de outra propriedade chamada NivelAcesso (char string com 'A' e 'F'), retornando uma descrição mais facil de ler.
+        //traduzir o valor da propriedade NivelAcesso (char string com 'A' e 'F'), retornando uma descrição legível.
         public string NivelAcessoTratado
         {
             get
@@ -20,6 +20,9 @@ namespace PizzaLink.Models
         }
     }
 
-    //Classe de coleção com a lista de usuarios
-    public class UsuarioCollection : List<Usuario> { }
+    //classe collection com a lista de usuarios
+    public class UsuarioCollection : List<Usuario> 
+    { 
+    
+    }
 }

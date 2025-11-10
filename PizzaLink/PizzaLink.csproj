@@ -51,9 +51,6 @@
     <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
-    <Compile Include="frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ItemPedido.cs" />
     <Compile Include="Models\Pedido.cs" />
@@ -78,11 +75,17 @@
     <Compile Include="Views\frmCadastroUsuario.Designer.cs">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmLogin.cs">
+    <Compile Include="Views\frmNovoPedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="Views\frmNovoPedido.Designer.cs">
+      <DependentUpon>frmNovoPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmPedidoDetalhes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmPedidoDetalhes.Designer.cs">
+      <DependentUpon>frmPedidoDetalhes.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -98,6 +101,24 @@
     <Compile Include="Views\frmSelecionaCliente.Designer.cs">
       <DependentUpon>frmSelecionaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmSelecionaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmSelecionaPedido.Designer.cs">
+      <DependentUpon>frmSelecionaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmSelecionaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmSelecionaProduto.Designer.cs">
+      <DependentUpon>frmSelecionaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmSelecionaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmSelecionaUsuario.Designer.cs">
+      <DependentUpon>frmSelecionaUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -110,17 +131,26 @@
     <EmbeddedResource Include="Views\frmCadastroCliente.resx">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmCadastroProduto.resx">
+      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmCadastroUsuario.resx">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmNovoPedido.resx">
+      <DependentUpon>frmNovoPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmSelecionaCliente.resx">
       <DependentUpon>frmSelecionaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmSelecionaProduto.resx">
+      <DependentUpon>frmSelecionaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmSelecionaUsuario.resx">
+      <DependentUpon>frmSelecionaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -6,15 +6,18 @@ namespace PizzaLink.Models
     {
         public int ItemPedidoId { get; set; }
         public int PedidoId { get; set; } 
-        public Produto Produto { get; set; } // Relacionamento com Produto
+        public Produto Produto { get; set; } //relacionamento com Produto
         public int Quantidade { get; set; }
-        public decimal PrecoUnitario { get; set; } // Preço na hora da venda
+        public decimal PrecoUnitario { get; set; } //preço na hora da venda
 
-        // Calculo do total (igual do banco de dados)
+        //cálculo do total (igual do banco de dados)
         public decimal Subtotal
         {
             get { return Quantidade * PrecoUnitario; }
         }
     }
-    public class ItemPedidoCollection : List<ItemPedido> { }
+    public class ItemPedidoCollection : List<ItemPedido>
+    { 
+    
+    }
 }

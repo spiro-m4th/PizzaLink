@@ -10,7 +10,7 @@ namespace PizzaLink.Models
         public decimal Preco { get; set; }
         public int Estoque { get; set; }
 
-        //Traduzir o que significa cada char
+        //traduzir o que significa cada char
         public string TipoTratado
         {
             get
@@ -25,5 +25,8 @@ namespace PizzaLink.Models
             }
         }
     }
-    public class ProdutoCollection : List<Produto> { }
+    public class ProdutoCollection : List<Produto> 
+    { 
+    
+    }
 }

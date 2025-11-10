@@ -55,8 +55,14 @@ CREATE TABLE ItemPedido (
 );
 GO
 
--- Inserir usuario Master para administrar o programa
--- Como manter este script seguro para ninguém invadir o sistema (?) (?) (?)
-INSERT INTO Usuario (Nome, Login, Senha, NivelAcesso) 
-VALUES ('Administrador', 'admin', 'admin', 'A');
-GO
+--realizar teste para ver se esta dando certo ou nao
+INSERT INTO Usuario
+VALUES (
+'Teste', 'test', 'test', 'A'
+);
+select * from Usuario;
+
+
+
+
+

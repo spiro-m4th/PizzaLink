@@ -3,38 +3,39 @@ using PizzaLink.Services;
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace PizzaLink.Controllers
 {
     public class UsuarioController
     {
-        //Instanciar a classe de conexão com o BD
+        //instanciar a classe de conexão com o BD
         DataBaseSqlServer dataBase = new DataBaseSqlServer();
 
-        //Método que insere na tabela Usuario
+        //método que insere na tabela Usuario
         public int Inserir(Usuario usuario)
         {
-            //Comando no SQLServer para inserir
+            //comando no SQLServer para inserir
             string query =
                 "INSERT INTO Usuario (Nome, Login, Senha, NivelAcesso) " +
                 "VALUES (@Nome, @Login, @Senha, @NivelAcesso)";
 
             SqlCommand command = new SqlCommand(query);
 
-            //Definir os valores dos parametros
+            //definir os valores dos parametros
             command.Parameters.AddWithValue("@Nome", usuario.Nome);
             command.Parameters.AddWithValue("@Login", usuario.Login);
             command.Parameters.AddWithValue("@Senha", usuario.Senha);
             command.Parameters.AddWithValue("@NivelAcesso", usuario.NivelAcesso);
 
-            //Executar o comando SQL e retornar
+            //executar o comando SQL e retornar
             //a quantidade de affected rows
             return dataBase.ExecuteSQL(command);
         }
 
-        //Método para alterar o registro
-        //Segue o mesmo esquema do método Inserir
-        //Define o comando, os parametros e executa retornando as linhas afetadas
+        //método para alterar o registro
+        //segue o mesmo esquema do método Inserir
+        //define o comando, os parametros e executa retornando as linhas afetadas
         public int Alterar(Usuario usuario)
         {
             string query =
@@ -56,8 +57,8 @@ namespace PizzaLink.Controllers
             return dataBase.ExecuteSQL(command);
         }
 
-        //Método para excluir um registro
-        //Segue o mesmo esquema dos outros métodos
+        //método para excluir um registro
+        //segue o mesmo esquema dos outros métodos
         public int Excluir(int usuarioId)
         {
             string query =
@@ -71,7 +72,7 @@ namespace PizzaLink.Controllers
             return dataBase.ExecuteSQL(command);
         }
 
-        //Método publico que retorna um objeto do tipo Usuario
+        //método publico que retorna um objeto do tipo Usuario
         public Usuario GetById(int usuarioId)
         {
             string query =
@@ -84,20 +85,20 @@ namespace PizzaLink.Controllers
 
             command.Parameters.AddWithValue("@UsuarioId", usuarioId);
 
-            //Executar o comando SQL e armazenar o resultado em um DataTable
+            //executar o comando SQL e armazenar o resultado em um DataTable
 
             DataTable dataTable = dataBase.GetDataTable(command);
 
             if (dataTable.Rows.Count > 0)
             {
-                //Criar um novo objeto Usuario
+                //criar um novo objeto Usuario
                 Usuario usuario = new Usuario();
 
-                //Conveter dados do SQL Server para C# usando Casting Direto
+                //conveter dados do SQL Server para C# usando Casting Direto
                 usuario.UsuarioId = (int)dataTable.Rows[0]["UsuarioId"];
                 usuario.Nome = (string)dataTable.Rows[0]["Nome"];
                 usuario.Login = (string)dataTable.Rows[0]["Login"];
-                //Por boas práticas e segurança, não retornar a senha
+                //por boas práticas e segurança, não retornar a senha
                 usuario.NivelAcesso = Convert.ToChar(dataTable.Rows[0]["NivelAcesso"]);
 
                 return usuario;
@@ -106,13 +107,13 @@ namespace PizzaLink.Controllers
                 return null;
         }
 
-        //Método que retorna a coleção de Usuarios com filtro
+        //método que retorna a coleção de Usuarios com filtro
         public UsuarioCollection GetByFilter(string filtro = "")
         {
-            //Comando SQL para selecionar
+            //comando SQL para selecionar
             string query = "SELECT * FROM Usuario ";
 
-            //Validar se o filtro foi passado no parametro
+            //validar se o filtro foi passado no parametro
             if (filtro != "")
                 query += " WHERE " + filtro;
 
@@ -120,13 +121,13 @@ namespace PizzaLink.Controllers
 
             SqlCommand command = new SqlCommand(query);
 
-            //Executar o comando SQL e armazenar o resultado
+            //executar o comando SQL e armazenar o resultado
             DataTable dataTable = dataBase.GetDataTable(command);
 
-            //Criar um novo objeto UsuarioColletion
+            //criar um novo objeto UsuarioColletion
             UsuarioCollection usuarios = new UsuarioCollection();
 
-            //Percorrer todas as linhas retornadas no DataTable
+            //percorrer todas as linhas retornadas no DataTable
             foreach (DataRow row in dataTable.Rows)
             {
                 Usuario usuario = new Usuario();
@@ -136,41 +137,17 @@ namespace PizzaLink.Controllers
                 usuario.Login = (string)row["Login"];
                 usuario.NivelAcesso = Convert.ToChar(row["NivelAcesso"]);
 
-                //Adicionar o objeto usuario na coleção
+                //adicionar o objeto usuario na coleção
                 usuarios.Add(usuario);
             }
             return usuarios;
         }
 
-        //Método que retorna uma coleção de Usuarios
+        //método que retorna uma coleção de Usuarios
         public UsuarioCollection GetAll()
         {
             return GetByFilter();
         }
 
-        // Método para validar o login
-        public Usuario ValidarLogin(string login, string senha)
-        {
-            //Comando para Selecionar o usuario com login e senha que foram informados
-            string query =
-                "SELECT * " +
-                "FROM Usuario " +
-                "WHERE Login = @Login AND Senha = @Senha";
-
-            SqlCommand command = new SqlCommand(query);
-            command.Parameters.AddWithValue("@Login", login);
-            command.Parameters.AddWithValue("@Senha", senha);
-
-            DataTable dataTable = dataBase.GetDataTable(command);
-
-            if (dataTable.Rows.Count > 0)
-            {
-                //Se encontrou, retorna o objeto Usuario completo
-                int usuarioId = (int)dataTable.Rows[0]["UsuarioId"];
-                return GetById(usuarioId);
-            }
-            else
-                return null;
-        }
     }
 }

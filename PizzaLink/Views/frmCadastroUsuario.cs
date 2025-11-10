@@ -7,11 +7,11 @@ namespace PizzaLink.Views
 {
     public partial class frmCadastroUsuario : Form
     {
-        // Variável para guardar o ID (0 = Novo, >0 = Alterar)
+        //variavel para guardar o ID do usuario
         private int usuarioId = 0;
         UsuarioController usuarioController = new UsuarioController();
 
-        // Construtor que aceita o ID, como exigido pelo frmLogin
+        //iniciar um construtor que aceita id como parametro
         public frmCadastroUsuario(int id)
         {
             InitializeComponent();
@@ -22,21 +22,19 @@ namespace PizzaLink.Views
         {
             if (this.usuarioId != 0)
             {
-                // Modo Alteração
+                //tela de alteração de usuario
                 this.Text = "Alterar Usuário";
 
-                // Carrega os dados do banco
+                //carrega os dados do banco
                 Usuario usuario = usuarioController.GetById(this.usuarioId);
                 txtNome.Text = usuario.Nome;
                 txtLogin.Text = usuario.Login;
-                txtSenha.Text = ""; // Senha não deve ser carregada
-
-                // Em um sistema real, o NivelAcesso seria um ComboBox
-                // Aqui, apenas travamos o 'F' para cadastro
+                txtSenha.Text = "";
+                txtSenha.Enabled = false; //desabilitar senha na alteração por boas praticas
             }
             else
             {
-                // Modo Novo (veio do "Cadastre-se" ou "Novo")
+                //modo cadastrar usuario
                 this.Text = "Novo Cadastro de Usuário";
             }
         }
@@ -48,44 +46,49 @@ namespace PizzaLink.Views
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            // 1. Validar
-            if (string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtLogin.Text) || string.IsNullOrWhiteSpace(txtSenha.Text))
+            //validacao de dados
+            if (string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtLogin.Text))
             {
-                MessageBox.Show("Preencha todos os campos (Nome, Login, Senha).");
+                MessageBox.Show("Nome e Login são obrigatórios.");
                 return;
             }
 
-            // 2. Preencher o Modelo
+            if (this.usuarioId == 0 && string.IsNullOrWhiteSpace(txtSenha.Text))
+            {
+                MessageBox.Show("Senha é obrigatória para novos usuários.");
+                return;
+            }
+
+            //preencher os models
             Usuario usuario = new Usuario();
             usuario.Nome = txtNome.Text;
             usuario.Login = txtLogin.Text;
-            usuario.Senha = txtSenha.Text; // (Em app real, usar Hash)
+            usuario.Senha = txtSenha.Text;
 
             try
             {
-                // 3. Chamar Controller (Inserir ou Alterar)
+                //chamar o controller para modificar os dados
                 if (this.usuarioId == 0)
                 {
-                    // INSERIR
-                    // Usuário que se cadastra é 'F' (Funcionário) por padrão
+                    //insert
                     usuario.NivelAcesso = 'F';
                     usuarioController.Inserir(usuario);
                 }
                 else
                 {
-                    // ALTERAR
+                    //update
                     usuario.UsuarioId = this.usuarioId;
-                    // (Aqui pegaria o NivelAcesso de um ComboBox)
-                    usuario.NivelAcesso = 'F'; // Simples
-                    usuarioController.Alterar(usuario);
+
+                    Usuario usuarioExistente = usuarioController.GetById(this.usuarioId);
+                    usuario.NivelAcesso = usuarioExistente.NivelAcesso;
                 }
 
-                MessageBox.Show("Usuário salvo com sucesso!", "Sucesso");
+                MessageBox.Show("Usuário salvo com sucesso!", "SUCESSO", MessageBoxButtons.OK);
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao salvar: " + ex.Message, "Erro");
+                MessageBox.Show("Erro ao salvar: " + ex.Message, "ERRO", MessageBoxButtons.OK);
             }
         }
     }

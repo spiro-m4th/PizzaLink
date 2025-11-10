@@ -19,7 +19,7 @@ namespace PizzaLink.Controllers
             string query =
                 "INSERT INTO Pedido (UsuarioId, ClienteId, DataHora, ValorTotal, Status) " +
                 "VALUES (@UsuarioId, @ClienteId, @DataHora, @ValorTotal, @Status);" +
-                "SELECT SCOPE_IDENTITY();"; // Pega o ID do Pedido inserido
+                "SELECT SCOPE_IDENTITY();"; //pega o ID do pedido inserido
 
             SqlCommand command = new SqlCommand(query);
 
@@ -35,19 +35,19 @@ namespace PizzaLink.Controllers
             if (retorno != null)
                 pedidoId = Convert.ToInt32(retorno);
             else
-                return 0; // Se não retornar o ID é pq falhou
+                return 0; //se não retornar o ID é pq falhou
 
-            // Inserir os itens do pedido (detalhes)
+            //inserir os itens do pedido (detalhes)
             if (pedidoId > 0)
             {
                 foreach (ItemPedido item in pedido.ItensDoPedido)
                 {
-                    item.PedidoId = pedidoId; //Associa o item ao Pedido principal
-                    itemPedidoController.Inserir(item); // Salva o item
+                    item.PedidoId = pedidoId; //associa o item ao pedido principal
+                    itemPedidoController.Inserir(item); //salva o item
                 }
             }
 
-            return pedidoId; // Retorna o ID do Peidido
+            return pedidoId; //retorna o ID do peidido
         }
 
         public int Alterar(Pedido pedido)

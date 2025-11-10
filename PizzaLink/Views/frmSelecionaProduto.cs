@@ -5,20 +5,20 @@ using System.Windows.Forms;
 
 namespace PizzaLink.Views
 {
-    public partial class frmSelecionaCliente : Form
+    public partial class frmSelecionaProduto : Form
     {
-        public Cliente clienteSelecao;
+        public Produto produtoSelecao; // Padrão 1
         private bool emSelecao = false;
-        ClienteController clienteController = new ClienteController();
+        ProdutoController produtoController = new ProdutoController();
 
-        public frmSelecionaCliente(bool emSelecao = false)
+        public frmSelecionaProduto(bool emSelecao = false)
         {
             InitializeComponent();
             this.emSelecao = emSelecao;
-            dgvClientes.AutoGenerateColumns = true;
+            dgvProdutos.AutoGenerateColumns = true;
         }
 
-        private void frmSelecionaCliente_Load(object sender, EventArgs e)
+        private void frmSelecionaProduto_Load(object sender, EventArgs e)
         {
             if (this.emSelecao)
             {
@@ -26,7 +26,7 @@ namespace PizzaLink.Views
                 btnAlterar.Visible = false;
                 btnExcluir.Visible = false;
                 btnSelecionar.Visible = true;
-                this.Text = "Selecionar Cliente";
+                this.Text = "Selecionar Produto";
             }
             else
             {
@@ -34,72 +34,72 @@ namespace PizzaLink.Views
                 btnAlterar.Visible = true;
                 btnExcluir.Visible = true;
                 btnSelecionar.Visible = false;
-                this.Text = "Gerenciar Clientes";
+                this.Text = "Gerenciar Produtos";
             }
             CarregarGrid();
         }
 
         private void CarregarGrid()
         {
-            dgvClientes.DataSource = null;
-            dgvClientes.DataSource = clienteController.GetByFilter();
-            dgvClientes.Update();
-            dgvClientes.Refresh();
+            dgvProdutos.DataSource = null;
+            dgvProdutos.DataSource = produtoController.GetByFilter();
+            dgvProdutos.Update();
+            dgvProdutos.Refresh();
         }
 
-        private Cliente GetSelecionado()
+        private Produto GetSelecionado()
         {
-            if (dgvClientes.SelectedRows.Count == 0)
+            if (dgvProdutos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Nenhum cliente selecionado.");
+                MessageBox.Show("Nenhum produto selecionado.");
                 return null;
             }
-            return dgvClientes.SelectedRows[0].DataBoundItem as Cliente;
+            return dgvProdutos.SelectedRows[0].DataBoundItem as Produto;
         }
 
-        //MANIPULAÇÃO DE DADOS
+        // --- CRUD ---
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            frmCadastroCliente frm = new frmCadastroCliente(0);
+            frmCadastroProduto frm = new frmCadastroProduto(0);
             frm.ShowDialog();
             CarregarGrid();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Cliente selecionado = GetSelecionado();
+            Produto selecionado = GetSelecionado();
             if (selecionado == null) return;
 
-            frmCadastroCliente frm = new frmCadastroCliente(selecionado.ClienteId);
+            frmCadastroProduto frm = new frmCadastroProduto(selecionado.ProdutoId);
             frm.ShowDialog();
             CarregarGrid();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Cliente selecionado = GetSelecionado();
+            Produto selecionado = GetSelecionado();
             if (selecionado == null) return;
 
             if (MessageBox.Show("Deseja realmente excluir?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                clienteController.Excluir(selecionado.ClienteId);
+                produtoController.Excluir(selecionado.ProdutoId);
                 CarregarGrid();
             }
         }
 
-        //BOTAO SELECIONAR
+        // --- SELEÇÃO ---
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
-            Cliente selecionado = GetSelecionado();
+            Produto selecionado = GetSelecionado();
             if (selecionado == null) return;
-            this.clienteSelecao = selecionado;
+            this.produtoSelecao = selecionado;
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            dgvClientes.DataSource = clienteController.GetByFilter("Nome LIKE '%" + txtPesquisa.Text + "%'");
+            dgvProdutos.DataSource = produtoController.GetByFilter("Nome LIKE '%" + txtPesquisa.Text + "%'");
         }
     }
 }

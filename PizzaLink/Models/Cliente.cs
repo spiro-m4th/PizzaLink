@@ -10,5 +10,8 @@ namespace PizzaLink.Models
         public string Cpf { get; set; }
         public string Endereco { get; set; }
     }
-    public class ClienteCollection : List<Cliente> { }
+    public class ClienteCollection : List<Cliente> 
+    { 
+    
+    }
 }
