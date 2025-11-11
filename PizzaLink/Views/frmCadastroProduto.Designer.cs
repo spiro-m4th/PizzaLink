@@ -30,6 +30,7 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.txtEstoque = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(676, 366);
             this.panel1.TabIndex = 12;
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Items.AddRange(new object[] {
+            "",
+            "Pizza",
+            "Bebida",
+            "Lanche"});
+            this.cbxTipo.Location = new System.Drawing.Point(22, 227);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(628, 21);
+            this.cbxTipo.TabIndex = 10;
             // 
             // btnCancelar
             // 
@@ -148,18 +161,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Preço";
             // 
-            // cbxTipo
-            // 
-            this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Items.AddRange(new object[] {
-            "Pizza",
-            "Bebida",
-            "Lanche"});
-            this.cbxTipo.Location = new System.Drawing.Point(22, 227);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(628, 21);
-            this.cbxTipo.TabIndex = 10;
-            // 
             // frmCadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +168,7 @@
             this.ClientSize = new System.Drawing.Size(703, 409);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmCadastroProduto";
             this.Text = "Novo Produto";
             this.Load += new System.EventHandler(this.frmCadastroProduto_Load);

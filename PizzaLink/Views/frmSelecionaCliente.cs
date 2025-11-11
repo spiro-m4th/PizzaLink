@@ -91,7 +91,8 @@ namespace PizzaLink.Views
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
             Cliente selecionado = GetSelecionado();
-            if (selecionado == null) return;
+            if (selecionado == null)
+                return;
             this.clienteSelecao = selecionado;
             this.DialogResult = DialogResult.OK;
             this.Close();

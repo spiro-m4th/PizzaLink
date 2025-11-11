@@ -143,7 +143,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmSelecionaUsuario";
-            this.Text = "Seleção de Usuario";
+            this.Text = "Gerenciar Usuários";
             this.Load += new System.EventHandler(this.frmSelecionaUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -162,6 +162,7 @@
             this.ClientSize = new System.Drawing.Size(700, 420);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmCadastroCliente";
             this.Text = "Novo Cliente";
             this.Load += new System.EventHandler(this.frmCadastroCliente_Load);

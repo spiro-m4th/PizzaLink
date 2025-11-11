@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+//classe que mostra o relacionamento entre Produto e Pedido
+//um pedido pode ter varios produtos
+//e varios produtos podem estar contidos em varios pedidos
 
 namespace PizzaLink.Models
 {
