@@ -67,21 +67,21 @@
             // menuClientes
             // 
             this.menuClientes.Name = "menuClientes";
-            this.menuClientes.Size = new System.Drawing.Size(180, 22);
+            this.menuClientes.Size = new System.Drawing.Size(122, 22);
             this.menuClientes.Text = "Clientes";
             this.menuClientes.Click += new System.EventHandler(this.menuClientes_Click);
             // 
             // menuProdutos
             // 
             this.menuProdutos.Name = "menuProdutos";
-            this.menuProdutos.Size = new System.Drawing.Size(180, 22);
+            this.menuProdutos.Size = new System.Drawing.Size(122, 22);
             this.menuProdutos.Text = "Produtos";
             this.menuProdutos.Click += new System.EventHandler(this.menuProdutos_Click);
             // 
             // menuUsuarios
             // 
             this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(180, 22);
+            this.menuUsuarios.Size = new System.Drawing.Size(122, 22);
             this.menuUsuarios.Text = "Usuarios";
             this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
@@ -96,7 +96,7 @@
             // menuNovoPedido
             // 
             this.menuNovoPedido.Name = "menuNovoPedido";
-            this.menuNovoPedido.Size = new System.Drawing.Size(180, 22);
+            this.menuNovoPedido.Size = new System.Drawing.Size(143, 22);
             this.menuNovoPedido.Text = "Novo Pedido";
             this.menuNovoPedido.Click += new System.EventHandler(this.menuNovoPedido_Click);
             // 
@@ -111,7 +111,7 @@
             // menuConsultarPedidos
             // 
             this.menuConsultarPedidos.Name = "menuConsultarPedidos";
-            this.menuConsultarPedidos.Size = new System.Drawing.Size(180, 22);
+            this.menuConsultarPedidos.Size = new System.Drawing.Size(170, 22);
             this.menuConsultarPedidos.Text = "Consultar Pedidos";
             this.menuConsultarPedidos.Click += new System.EventHandler(this.menuConsultarPedidos_Click);
             // 
@@ -129,8 +129,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStripPrincipal);
             this.MainMenuStrip = this.menuStripPrincipal;
+            this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.Text = "Pizza Link - Sistema de Gerenciamento ";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStripPrincipal.ResumeLayout(false);
             this.menuStripPrincipal.PerformLayout();
             this.ResumeLayout(false);

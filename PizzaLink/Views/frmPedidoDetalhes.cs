@@ -1,20 +1,124 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PizzaLink.Controllers;
+using PizzaLink.Models;
+using System;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace PizzaLink.Views
 {
     public partial class frmPedidoDetalhes : Form
     {
-        public frmPedidoDetalhes()
+        Pedido pedidoSelecionado;
+        ItemPedidoController itemPedidoController = new ItemPedidoController();
+
+        //construtor que ira receber o pedido da outra tela
+        public frmPedidoDetalhes(Pedido pedido)
         {
             InitializeComponent();
+
+            this.pedidoSelecionado = pedido;
+
+            dgvItensPedido.AutoGenerateColumns = false;
+            //nomeando as colunas seguindo o padrao utilizado em frmSelecionaPedido
+            colProdutoId.DataPropertyName = "Produto.ProdutoId"; 
+            colProdutoNome.DataPropertyName = "Produto.Nome";
+            colQuantidade.DataPropertyName = "Quantidade";
+            colPrecoUnitario.DataPropertyName = "PrecoUnitario";
+            colSubtotal.DataPropertyName = "Subtotal";            
+        }
+
+        private object CarregarPropriedade(object propriedade, string nomeDaPropriedade)
+        {
+            try
+            {
+                object retorno = "";
+                if (nomeDaPropriedade.Contains("."))
+                {
+                    PropertyInfo[] propertyInfoArray;
+                    string propriedadeAntesDoPonto;
+                    propriedadeAntesDoPonto = nomeDaPropriedade.Substring(0, nomeDaPropriedade.IndexOf("."));
+                    if (propriedade != null)
+                    {
+                        propertyInfoArray = propriedade.GetType().GetProperties();
+                        foreach (PropertyInfo propertyInfo in propertyInfoArray)
+                        {
+                            if (propertyInfo.Name == propriedadeAntesDoPonto)
+                            {
+                                retorno = CarregarPropriedade(propertyInfo.GetValue(propriedade, null),
+                                    nomeDaPropriedade.Substring(nomeDaPropriedade.IndexOf(".") + 1));
+                                break;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    Type typeProperty;
+                    PropertyInfo propertyInfo;
+                    if (propriedade != null)
+                    {
+                        typeProperty = propriedade.GetType();
+                        propertyInfo = typeProperty.GetProperty(nomeDaPropriedade);
+                        retorno = propertyInfo.GetValue(propriedade, null);
+                    }
+                }
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return null;
+            }
+        }
+
+        private void dgvItensPedido_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                if ((dgvItensPedido.Rows[e.RowIndex].DataBoundItem != null) &&
+                    (dgvItensPedido.Columns[e.ColumnIndex].DataPropertyName.Contains(".")))
+                {
+                    e.Value = CarregarPropriedade(dgvItensPedido.Rows[e.RowIndex].DataBoundItem,
+                        dgvItensPedido.Columns[e.ColumnIndex].DataPropertyName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void frmPedidoDetalhes_Load(object sender, EventArgs e)
+        {
+            //iniciar com o metodo de carregar os dados na tela
+            CarregarDadosPedido();
+            CarregarItens();
+        }
+
+        private void CarregarDadosPedido()
+        {
+            //carregar dados do objeto
+            txtPedidoId.Text = pedidoSelecionado.PedidoId.ToString();
+            txtDataHora.Text = pedidoSelecionado.DataHora.ToString();
+            txtStatus.Text = pedidoSelecionado.StatusTratado;
+            txtTotal.Text = pedidoSelecionado.ValorTotal.ToString("C2");
+            txtClienteNome.Text = pedidoSelecionado.Cliente.Nome;
+            txtUsuarioNome.Text = pedidoSelecionado.Usuario.Nome;
+        }
+
+        private void CarregarItens()
+        {
+            //carregar a grid
+            dgvItensPedido.DataSource = null;
+            //buscar no BD
+            dgvItensPedido.DataSource = itemPedidoController.GetByPedidoId(pedidoSelecionado.PedidoId);
+            dgvItensPedido.Update();
+            dgvItensPedido.Refresh();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

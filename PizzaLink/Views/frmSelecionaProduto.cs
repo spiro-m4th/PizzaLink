@@ -7,7 +7,7 @@ namespace PizzaLink.Views
 {
     public partial class frmSelecionaProduto : Form
     {
-        public Produto produtoSelecao; // Padrão 1
+        public Produto produtoSelecao;
         private bool emSelecao = false;
         ProdutoController produtoController = new ProdutoController();
 
@@ -57,7 +57,7 @@ namespace PizzaLink.Views
             return dgvProdutos.SelectedRows[0].DataBoundItem as Produto;
         }
 
-        // --- CRUD ---
+        //manipulacao de dados
         private void btnNovo_Click(object sender, EventArgs e)
         {
             frmCadastroProduto frm = new frmCadastroProduto(0);
@@ -87,11 +87,12 @@ namespace PizzaLink.Views
             }
         }
 
-        // --- SELEÇÃO ---
+        //botao selecionar
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
             Produto selecionado = GetSelecionado();
-            if (selecionado == null) return;
+            if (selecionado == null) 
+                return;
             this.produtoSelecao = selecionado;
             this.DialogResult = DialogResult.OK;
             this.Close();

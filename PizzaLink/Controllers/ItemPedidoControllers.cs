@@ -73,5 +73,14 @@ namespace PizzaLink.Controllers
         {
             return GetByFilter("PedidoId = " + pedidoId);
         }
+
+        //metodo necessario na logica de frmNovoPedido
+        public int ExcluirPorItemId(int itemPedidoId)
+        {
+            string query = "DELETE FROM ItemPedido WHERE ItemPedidoId = @ItemPedidoId";
+            SqlCommand command = new SqlCommand(query);
+            command.Parameters.AddWithValue("@ItemPedidoId", itemPedidoId);
+            return dataBase.ExecuteSQL(command);
+        }
     }
 }

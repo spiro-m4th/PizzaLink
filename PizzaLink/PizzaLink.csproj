@@ -140,11 +140,17 @@
     <EmbeddedResource Include="Views\frmNovoPedido.resx">
       <DependentUpon>frmNovoPedido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmPedidoDetalhes.resx">
+      <DependentUpon>frmPedidoDetalhes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmSelecionaCliente.resx">
       <DependentUpon>frmSelecionaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmSelecionaPedido.resx">
+      <DependentUpon>frmSelecionaPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmSelecionaProduto.resx">
       <DependentUpon>frmSelecionaProduto.cs</DependentUpon>

@@ -52,6 +52,11 @@ namespace PizzaLink.Views
             else
             return;
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

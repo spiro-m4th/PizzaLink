@@ -126,14 +126,15 @@ namespace PizzaLink.Controllers
             else
                 return null;
         }
-        private PedidoCollection GetByFilter(string filtro = "")
+        //publico, pois sera usado posteriormente em SelecionaPedido
+        public PedidoCollection GetByFilter(string filtro = "")
         {
             string query = "SELECT * FROM Pedido ";
 
             if (filtro != "")
                 query += " WHERE " + filtro;
 
-            query += " ORDER BY DataHora DESC"; //Em ordem decrescente, ou seja, do mais recente pro mais antigo
+            query += " ORDER BY DataHora DESC"; //ordem decrescente, ou seja, do mais recente pro mais antigo
 
             SqlCommand command = new SqlCommand(query);
 
@@ -141,7 +142,7 @@ namespace PizzaLink.Controllers
 
             PedidoCollection pedidos = new PedidoCollection();
 
-            //Percorrer todas as linhas
+            //percorrer todas as linhas
             foreach (DataRow row in dataTable.Rows)
             {
                 Pedido pedido = new Pedido();
@@ -181,7 +182,7 @@ namespace PizzaLink.Controllers
             return GetByFilter(where);
         }
 
-        //Outros filtros
+        //outros filtros
         public PedidoCollection GetByCliente(int clienteId)
         {
             return GetByFilter("ClienteId = " + clienteId);
@@ -190,6 +191,12 @@ namespace PizzaLink.Controllers
         public PedidoCollection GetByStatus(char status)
         {
             return GetByFilter("Status = '" + status + "'");
+        }
+        //usado em SelecionaPedido
+        public PedidoCollection GetByUsuario(int usuarioId)
+        {
+            // o método é um atalho para o GetByFilter
+            return GetByFilter("UsuarioId = " + usuarioId);
         }
     }
 }

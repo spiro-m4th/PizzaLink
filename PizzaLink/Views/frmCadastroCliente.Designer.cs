@@ -163,6 +163,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmCadastroCliente";
             this.Text = "Novo Cliente";
             this.Load += new System.EventHandler(this.frmCadastroCliente_Load);

@@ -142,6 +142,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmSelecionaUsuario";
             this.Text = "Gerenciar Usuários";
             this.Load += new System.EventHandler(this.frmSelecionaUsuario_Load);

@@ -1,46 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\",
+  "WorkspaceRootPath": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\views\\frmselecionacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmselecionacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\views\\frmselecionapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\pizzalink\\views\\frmselecionapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmselecionapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\views\\frmselecionausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmselecionausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\usu\u00E1rio\\desktop\\pizzalink\\pizzalink\\controllers\\itempedidocontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\controllers\\itempedidocontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\views\\frmselecionausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmselecionausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\usu\u00E1rio\\desktop\\pizzalink\\pizzalink\\views\\frmpedidodetalhes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmpedidodetalhes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\views\\frmcadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmcadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\usu\u00E1rio\\desktop\\pizzalink\\pizzalink\\views\\frmselecionapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmselecionapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\views\\frmcadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\usu\u00E1rio\\desktop\\pizzalink\\pizzalink\\views\\frmpedidodetalhes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmpedidodetalhes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\usu\u00E1rio\\desktop\\pizzalink\\pizzalink\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\pizzalink\\views\\frmcadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmcadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\views\\frmselecionacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmselecionacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\views\\frmselecionaproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmselecionaproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\services\\databasesqlserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\services\\databasesqlserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,132 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmSelecionaPedido.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaPedido.cs",
-              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmSelecionaPedido.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaPedido.cs [Design]",
-              "RelativeToolTip": "PizzaLink\\Views\\frmSelecionaPedido.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "frmCadastroUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmCadastroUsuario.cs",
+              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmCadastroUsuario.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmCadastroUsuario.cs",
+              "RelativeToolTip": "PizzaLink\\Views\\frmCadastroUsuario.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAIwBYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T00:53:00.871Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-11T01:13:18.857Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmSelecionaUsuario.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaUsuario.cs",
-              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmSelecionaUsuario.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaUsuario.cs [Design]",
-              "RelativeToolTip": "PizzaLink\\Views\\frmSelecionaUsuario.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "frmPedidoDetalhes.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmPedidoDetalhes.cs",
+              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmPedidoDetalhes.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmPedidoDetalhes.cs",
+              "RelativeToolTip": "PizzaLink\\Views\\frmPedidoDetalhes.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAwwGkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T00:53:05.03Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-11T19:57:06.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "PizzaLink\\Controllers\\PedidoController.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "PizzaLink\\Controllers\\PedidoController.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAAwMUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T19:48:29.909Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "frmSelecionaUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaUsuario.cs",
-              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmSelecionaUsuario.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaUsuario.cs",
-              "RelativeToolTip": "PizzaLink\\Views\\frmSelecionaUsuario.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA5wBgAAAAMAAAAAAAAAA==",
+              "Title": "frmSelecionaPedido.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaPedido.cs",
+              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmSelecionaPedido.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaPedido.cs",
+              "RelativeToolTip": "PizzaLink\\Views\\frmSelecionaPedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T00:53:06.764Z",
+              "WhenOpened": "2025-11-11T19:28:10.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmPedidoDetalhes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmPedidoDetalhes.cs",
+              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmPedidoDetalhes.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmPedidoDetalhes.cs [Design]",
+              "RelativeToolTip": "PizzaLink\\Views\\frmPedidoDetalhes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T19:11:41.574Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ItemPedidoControllers.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Controllers\\ItemPedidoControllers.cs",
+              "RelativeDocumentMoniker": "PizzaLink\\Controllers\\ItemPedidoControllers.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Controllers\\ItemPedidoControllers.cs",
+              "RelativeToolTip": "PizzaLink\\Controllers\\ItemPedidoControllers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T15:43:20.997Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmSelecionaCliente.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaCliente.cs",
-              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmSelecionaCliente.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaCliente.cs [Design]",
-              "RelativeToolTip": "PizzaLink\\Views\\frmSelecionaCliente.cs [Design]",
+              "Title": "frmSelecionaPedido.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaPedido.cs",
+              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmSelecionaPedido.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaPedido.cs [Design]",
+              "RelativeToolTip": "PizzaLink\\Views\\frmSelecionaPedido.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T23:38:33.63Z",
+              "WhenOpened": "2025-11-11T00:53:00.871Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmCadastroUsuario.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmCadastroUsuario.cs",
-              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmCadastroUsuario.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmCadastroUsuario.cs [Design]",
-              "RelativeToolTip": "PizzaLink\\Views\\frmCadastroUsuario.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T01:13:12.372Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmCadastroUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmCadastroUsuario.cs",
-              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmCadastroUsuario.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmCadastroUsuario.cs",
-              "RelativeToolTip": "PizzaLink\\Views\\frmCadastroUsuario.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAowBYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T01:13:18.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmSelecionaCliente.cs",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaCliente.cs",
-              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmSelecionaCliente.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaCliente.cs",
-              "RelativeToolTip": "PizzaLink\\Views\\frmSelecionaCliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T23:43:45.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmSelecionaProduto.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaProduto.cs",
-              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmSelecionaProduto.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmSelecionaProduto.cs [Design]",
-              "RelativeToolTip": "PizzaLink\\Views\\frmSelecionaProduto.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T00:53:03.405Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DataBaseSqlServer.cs",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Services\\DataBaseSqlServer.cs",
-              "RelativeDocumentMoniker": "PizzaLink\\Services\\DataBaseSqlServer.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Services\\DataBaseSqlServer.cs",
-              "RelativeToolTip": "PizzaLink\\Services\\DataBaseSqlServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T00:28:19.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "PizzaLink\\Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "PizzaLink\\Controllers\\ClienteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T23:36:19.332Z",
-              "EditorCaption": ""
             }
           ]
         }

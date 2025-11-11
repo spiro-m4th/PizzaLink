@@ -141,6 +141,7 @@
             this.ClientSize = new System.Drawing.Size(728, 433);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "frmSelecionaProduto";
             this.Text = "Gerenciar Produtos";
             this.Load += new System.EventHandler(this.frmSelecionaProduto_Load);
