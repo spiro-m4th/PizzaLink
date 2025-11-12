@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelecionaPedido));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,17 +43,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFim = new System.Windows.Forms.DateTimePicker();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
-            this.btnVisualizar = new System.Windows.Forms.Button();
-            this.btnFinalizar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.colPedidoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDataHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colClienteNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colUsuarioNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVisualizar = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -213,6 +214,48 @@
             this.dgvPedidos.TabIndex = 4;
             this.dgvPedidos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPedidos_CellFormatting);
             // 
+            // colPedidoId
+            // 
+            this.colPedidoId.DataPropertyName = "PedidoId";
+            this.colPedidoId.HeaderText = "Pedido ID";
+            this.colPedidoId.Name = "colPedidoId";
+            this.colPedidoId.ReadOnly = true;
+            // 
+            // colDataHora
+            // 
+            this.colDataHora.DataPropertyName = "DataHora";
+            this.colDataHora.HeaderText = "Data/ Hora";
+            this.colDataHora.Name = "colDataHora";
+            this.colDataHora.ReadOnly = true;
+            // 
+            // colClienteNome
+            // 
+            this.colClienteNome.DataPropertyName = "Cliente.Nome";
+            this.colClienteNome.HeaderText = "Nome do Cliente";
+            this.colClienteNome.Name = "colClienteNome";
+            this.colClienteNome.ReadOnly = true;
+            // 
+            // colUsuarioNome
+            // 
+            this.colUsuarioNome.DataPropertyName = "Usuario.Nome";
+            this.colUsuarioNome.HeaderText = "Nome do Usuario";
+            this.colUsuarioNome.Name = "colUsuarioNome";
+            this.colUsuarioNome.ReadOnly = true;
+            // 
+            // colValorTotal
+            // 
+            this.colValorTotal.DataPropertyName = "ValorTotal";
+            this.colValorTotal.HeaderText = "Valor Total";
+            this.colValorTotal.Name = "colValorTotal";
+            this.colValorTotal.ReadOnly = true;
+            // 
+            // colStatus
+            // 
+            this.colStatus.DataPropertyName = "StatusTratado";
+            this.colStatus.HeaderText = "Status";
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            // 
             // btnVisualizar
             // 
             this.btnVisualizar.Location = new System.Drawing.Point(310, 290);
@@ -268,48 +311,6 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "SELECIONAR PEDIDO";
             // 
-            // colPedidoId
-            // 
-            this.colPedidoId.DataPropertyName = "PedidoId";
-            this.colPedidoId.HeaderText = "Pedido ID";
-            this.colPedidoId.Name = "colPedidoId";
-            this.colPedidoId.ReadOnly = true;
-            // 
-            // colDataHora
-            // 
-            this.colDataHora.DataPropertyName = "DataHora";
-            this.colDataHora.HeaderText = "Data/ Hora";
-            this.colDataHora.Name = "colDataHora";
-            this.colDataHora.ReadOnly = true;
-            // 
-            // colClienteNome
-            // 
-            this.colClienteNome.DataPropertyName = "Cliente.Nome";
-            this.colClienteNome.HeaderText = "Nome do Cliente";
-            this.colClienteNome.Name = "colClienteNome";
-            this.colClienteNome.ReadOnly = true;
-            // 
-            // colUsuarioNome
-            // 
-            this.colUsuarioNome.DataPropertyName = "Usuario.Nome";
-            this.colUsuarioNome.HeaderText = "Nome do Usuario";
-            this.colUsuarioNome.Name = "colUsuarioNome";
-            this.colUsuarioNome.ReadOnly = true;
-            // 
-            // colValorTotal
-            // 
-            this.colValorTotal.DataPropertyName = "ValorTotal";
-            this.colValorTotal.HeaderText = "Valor Total";
-            this.colValorTotal.Name = "colValorTotal";
-            this.colValorTotal.ReadOnly = true;
-            // 
-            // colStatus
-            // 
-            this.colStatus.DataPropertyName = "StatusTratado";
-            this.colStatus.HeaderText = "Status";
-            this.colStatus.Name = "colStatus";
-            this.colStatus.ReadOnly = true;
-            // 
             // frmSelecionaPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,6 +320,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmSelecionaPedido";
             this.Text = "Selecionar Pedido";

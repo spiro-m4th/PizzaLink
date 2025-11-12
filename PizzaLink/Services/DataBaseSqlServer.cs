@@ -19,15 +19,20 @@ namespace PizzaLink.Services
 
         private SqlConnection GetConnection()
         {
-              /* string connectionString =
+              string connectionString =
                 @"Data Source=localhost\SQLEXPRESS;" +
                 "Initial Catalog=PizzaLinkMVC;" +
-                "Integrated Security=SSPI;"; */
-
-           string connectionString =
-                @"Data Source=DESKTOP-MATH;" +
-                "Initial Catalog=PizzaLinkMVC;" +
                 "Integrated Security=SSPI;";
+
+            /* string connectionString =
+                 @"Data Source=DESKTOP-MATH;" +
+                 "Initial Catalog=PizzaLinkMVC;" +
+                 "Integrated Security=SSPI;"; */
+
+            /* string connectionString =
+                @"Data Source=MATHEUS;" +
+                "Initial Catalog=PizzaLinkMVC;" +
+                "Integrated Security=SSPI;"; */
 
             return new SqlConnection(connectionString);
         }

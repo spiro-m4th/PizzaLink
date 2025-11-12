@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\",
+  "WorkspaceRootPath": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\matheus\\desktop\\pizzalink\\pizzalink\\views\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\usu\u00E1rio\\desktop\\pizzalink\\pizzalink\\views\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -20,12 +20,12 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "frmPrincipal.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "PizzaLink\\Views\\frmPrincipal.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmPrincipal.cs [Design]",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmPrincipal.cs [Design]",
               "RelativeToolTip": "PizzaLink\\Views\\frmPrincipal.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T04:38:52.25Z",
+              "WhenOpened": "2025-11-12T14:56:27.255Z",
               "EditorCaption": " [Design]"
             }
           ]
