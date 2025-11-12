@@ -59,7 +59,7 @@ namespace PizzaLink.Views
             return dgvClientes.SelectedRows[0].DataBoundItem as Cliente;
         }
 
-        //MANIPULAÇÃO DE DADOS
+        #region Cliques
         private void btnNovo_Click(object sender, EventArgs e)
         {
             frmCadastroCliente frm = new frmCadastroCliente(0);
@@ -126,5 +126,6 @@ namespace PizzaLink.Views
         {
             dgvClientes.DataSource = clienteController.GetByFilter("Nome LIKE '%" + txtPesquisa.Text + "%'");
         }
+        #endregion
     }
 }

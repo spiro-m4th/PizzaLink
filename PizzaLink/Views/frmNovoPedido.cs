@@ -252,7 +252,7 @@ namespace PizzaLink.Views
             }
         }
 
-        //métodos de apoio para atualizar a tela
+        #region Métodos
         private void AtualizarGrade(int pedidoId)
         {
             dgvItensPedido.DataSource = null;
@@ -303,8 +303,8 @@ namespace PizzaLink.Views
             dgvItensPedido.DataSource = null;
             btnPesquisarCliente.Focus();
         }
-
-        //eventos de click
+        #endregion
+        #region Eventos de Click
         private void btnPesquisarCliente_Click(object sender, EventArgs e)
         {
             PesquisarCliente();
@@ -350,5 +350,6 @@ namespace PizzaLink.Views
             if(dialogResult == DialogResult.Yes)
             this.Close();
         }
+        #endregion
     }
 }
