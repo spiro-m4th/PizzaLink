@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\usu\u00E1rio\\desktop\\pizzalink\\pizzalink\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\usu\u00E1rio\\desktop\\pizzalink\\pizzalink\\views\\frmnovopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmnovopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\usu\u00E1rio\\desktop\\pizzalink\\pizzalink\\views\\frmnovopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmnovopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|c:\\users\\usu\u00E1rio\\desktop\\pizzalink\\pizzalink\\views\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{579CBF22-4397-426C-A97D-79D0DFA44CB3}|PizzaLink\\PizzaLink.csproj|solutionrelative:pizzalink\\views\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -14,11 +26,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmNovoPedido.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmNovoPedido.cs",
+              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmNovoPedido.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmNovoPedido.cs",
+              "RelativeToolTip": "PizzaLink\\Views\\frmNovoPedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T18:06:38.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmNovoPedido.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmNovoPedido.cs",
+              "RelativeDocumentMoniker": "PizzaLink\\Views\\frmNovoPedido.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmNovoPedido.cs [Design]",
+              "RelativeToolTip": "PizzaLink\\Views\\frmNovoPedido.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T18:06:34.298Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "PizzaLink\\Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "PizzaLink\\Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAYwIUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T18:05:53.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmPrincipal.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\Desktop\\PizzaLink\\PizzaLink\\Views\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "PizzaLink\\Views\\frmPrincipal.cs",

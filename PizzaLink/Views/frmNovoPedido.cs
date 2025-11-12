@@ -19,6 +19,7 @@ namespace PizzaLink.Views
         //instanciar controllers
         PedidoController pedidoController = new PedidoController();
         ItemPedidoController itemPedidoController = new ItemPedidoController();
+        ProdutoController produtoController = new ProdutoController();
 
         public frmNovoPedido()
         {
@@ -182,6 +183,18 @@ namespace PizzaLink.Views
 
             if (itemPedidoController.Inserir(item) > 0)
             {
+                //(Baixa de Estoque)
+                try
+                {
+                    //controller para subtrair a quantidade vendida do estoque
+                    produtoController.AlterarEstoque(produtoPedido.ProdutoId, quantidade);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("O item foi adicionado ao pedido, mas ocorreu um erro ao baixar o estoque: " + ex.Message, "Erro de Estoque");
+                }
+
+
                 AtualizarTotalPedido();
                 AtualizarGrade(pedido.PedidoId);
                 LimparCamposItem();
@@ -191,7 +204,6 @@ namespace PizzaLink.Views
                 MessageBox.Show("Falha ao inserir item", "ERRO");
             }
         }
-
         private ItemPedido GetItemSelecionado()
         {
             if (dgvItensPedido.SelectedRows.Count == 0)

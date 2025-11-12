@@ -129,5 +129,20 @@ namespace PizzaLink.Controllers
         {
             return GetByFilter("Nome LIKE '%" + value + "%'");
         }
+        public int AlterarEstoque(int produtoId, int quantidadeVendida)
+        {
+            //subtrai o valor do estoque atual
+            string query =
+                "UPDATE Produto SET " +
+                "Estoque = Estoque - @Quantidade " +
+                "WHERE ProdutoId = @ProdutoId";
+
+            SqlCommand command = new SqlCommand(query);
+
+            command.Parameters.AddWithValue("@Quantidade", quantidadeVendida);
+            command.Parameters.AddWithValue("@ProdutoId", produtoId);
+
+            return dataBase.ExecuteSQL(command);
+        }
     }
 }
