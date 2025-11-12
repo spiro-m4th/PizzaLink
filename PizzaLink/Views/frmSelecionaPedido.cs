@@ -14,16 +14,9 @@ namespace PizzaLink.Views
         {
             InitializeComponent();
             dgvPedidos.AutoGenerateColumns = false;
-
-            //testando uma maneira diferente de adicionar grids
-            colPedidoId.DataPropertyName = "PedidoId";
-            colDataHora.DataPropertyName = "DataHora";
-            colClienteNome.DataPropertyName = "Cliente.Nome";
-            colUsuarioNome.DataPropertyName = "Usuario.Nome";
-            colValorTotal.DataPropertyName = "ValorTotal";
-            colStatus.DataPropertyName = "StatusTratado";
         }
 
+        #region Carregar Propriedade
         private object CarregarPropriedade(object propriedade, string nomeDaPropriedade)
         {
             try
@@ -84,27 +77,13 @@ namespace PizzaLink.Views
                 MessageBox.Show(ex.Message, "Atenção...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private void frmSelecaoPedido_Load(object sender, EventArgs e)
-        {
-            //garantir que os filtros estejam visiveis
-            txtFiltrar.Visible = true;
-            cbxStatus.Visible = true;
-
-            //padroes
-            cbxFiltro.SelectedIndex = 4; // "todos"
-            cbxStatus.SelectedIndex = 0; // "pendente"
-
-            //desabilitar filtos que nao sejam "todos"
-            AjustarFiltros();
-
-            //pesquisa inicial
-            Pesquisar();
-        }
+        #endregion
 
         //desabilitar tudo
         private void DesabilitarTodosFiltros()
         {
+            dtpInicio.Enabled = false;
+            dtpFim.Enabled = false;
             txtFiltrar.Enabled = false;
             cbxStatus.Enabled = false;
         }
@@ -113,27 +92,27 @@ namespace PizzaLink.Views
         private void AjustarFiltros()
         {
             DesabilitarTodosFiltros();
-
             switch (cbxFiltro.SelectedIndex)
             {
-                case 0: //periodo
+                case 1: //periodo
                     dtpInicio.Enabled = true;
                     dtpFim.Enabled = true;
                     dtpInicio.Focus();
-                    dtpFim.Focus();
                     break;
-                case 1: //cliente ID
-                case 2: //usuario ID
+                case 2: //cliente ID
+                case 3: //usuario ID
                     txtFiltrar.Enabled = true;
                     txtFiltrar.Focus();
                     break;
-                case 3: //status
+                case 4: //status
                     cbxStatus.Enabled = true;
                     cbxStatus.Focus();
                     break;
-                case 4: //todos
+                case 5: //todos
                     btnPesquisar.Focus();
                     break;
+                    // case 0 (o item em branco) não faz nada,
+                    // todos ficam desabilitados
             }
         }
 
@@ -144,35 +123,37 @@ namespace PizzaLink.Views
 
         private void Pesquisar()
         {
-            int id = 0;
             PedidoCollection pedidoCollection = new PedidoCollection();
             dgvPedidos.DataSource = null;
 
             //logica do filtro
             switch (cbxFiltro.SelectedIndex)
             {
-                case 0:
+                case 1: //periodo
                     pedidoCollection = pedidoController.GetByPeriodo(dtpInicio.Value, dtpFim.Value);
                     break;
-                case 1:
-                    if (int.TryParse(txtFiltrar.Text, out id))
-                        pedidoCollection = pedidoController.GetByCliente(id);
+
+                case 2: //nome cliente
+                    string nomeCliente = txtFiltrar.Text;
+                    pedidoCollection = pedidoController.GetByNomeCliente(nomeCliente);
                     break;
-                case 2: 
-                    if (int.TryParse(txtFiltrar.Text, out id))
-                        pedidoCollection = pedidoController.GetByUsuario(id);
+
+                case 3: // nome vendedor
+                    string nomeUsuario = txtFiltrar.Text;
+                    pedidoCollection = pedidoController.GetByNomeUsuario(nomeUsuario);
                     break;
-                case 3: 
+
+                case 4: //status
                     char status = 'P';
                     switch (cbxStatus.SelectedIndex)
                     {
                         case 0: status = 'P'; break;
                         case 1: status = 'F'; break;
-                        case 2: status = 'C'; break; 
+                        case 2: status = 'C'; break;
                     }
                     pedidoCollection = pedidoController.GetByStatus(status);
                     break;
-                case 4: // Todos
+                case 5: //todos
                     pedidoCollection = pedidoController.GetByFilter();
                     break;
             }
@@ -181,7 +162,6 @@ namespace PizzaLink.Views
             dgvPedidos.Update();
             dgvPedidos.Refresh();
         }
-
         private Pedido GetRegistro()
         {
             if (dgvPedidos.SelectedRows.Count == 0)
@@ -229,7 +209,7 @@ namespace PizzaLink.Views
             }
         }
 
-        //eventos de click
+        #region Eventos de Click
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             Pesquisar();
@@ -248,6 +228,23 @@ namespace PizzaLink.Views
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             AlterarStatus(false);
+        }
+        #endregion
+
+        private void frmSelecionaPedido_Load(object sender, EventArgs e)
+        {
+            dtpInicio.Visible = true;
+            dtpFim.Visible = true;
+            txtFiltrar.Visible = true;
+            cbxStatus.Visible = true;
+
+            //padrões na hora de iniciar a tela
+            cbxFiltro.SelectedIndex = 0;
+            cbxStatus.SelectedIndex = 0;
+
+            AjustarFiltros();
+
+            Pesquisar();
         }
     }
 }

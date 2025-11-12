@@ -1,7 +1,8 @@
-﻿using PizzaLink.Controllers;
-using PizzaLink.Models;
-using System;
+﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+using PizzaLink.Controllers;
+using PizzaLink.Models;
 
 namespace PizzaLink.Views
 {
@@ -80,13 +81,32 @@ namespace PizzaLink.Views
             Produto selecionado = GetSelecionado();
             if (selecionado == null) return;
 
-            if (MessageBox.Show("Deseja realmente excluir?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja realmente excluir este produto?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                produtoController.Excluir(selecionado.ProdutoId);
-                CarregarGrid();
+                try
+                {
+                    //tenta excluir
+                    if (produtoController.Excluir(selecionado.ProdutoId) > 0)
+                    {
+                        MessageBox.Show("Produto excluído com sucesso!");
+                        CarregarGrid();
+                    }
+                }
+                catch (SqlException ex) when (ex.Number == 547) //547 = Erro de FK
+                {
+                    MessageBox.Show(
+                        "Não é possível excluir este produto, pois ele já foi utilizado em um ou mais pedidos.",
+                        "Exclusão Falhou",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro inesperado ao excluir: " + ex.Message, "Erro");
+                }
             }
         }
-
         //botao selecionar
         private void btnSelecionar_Click(object sender, EventArgs e)
         {

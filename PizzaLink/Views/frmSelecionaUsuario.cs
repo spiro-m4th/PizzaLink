@@ -18,10 +18,12 @@ namespace PizzaLink.Views
         {
             InitializeComponent();
             this.emSelecao = emSelecao;
+            dgvUsuarios.AutoGenerateColumns = true;
         }
 
         private void frmSelecionaUsuario_Load(object sender, EventArgs e)
         {
+
             //ajusta a tela para o modo de gerenciamento ou seleção
             if (this.emSelecao)
             {
@@ -46,9 +48,10 @@ namespace PizzaLink.Views
 
         private void CarregarGrid()
         {
+            //filtro baseado no que esta digitado no txtPesquisa
+            string filtro = "Nome LIKE '%" + txtPesquisa.Text + "%'";
             dgvUsuarios.DataSource = null;
-            //GetByFilter() sem filtro busca todos, igual GetAll()
-            dgvUsuarios.DataSource = usuarioController.GetByFilter();
+            dgvUsuarios.DataSource = usuarioController.GetByFilter(filtro);
             dgvUsuarios.Update();
             dgvUsuarios.Refresh();
         }
@@ -88,13 +91,29 @@ namespace PizzaLink.Views
             Usuario selecionado = GetSelecionado();
             if (selecionado == null) return;
 
-            if (MessageBox.Show("Deseja realmente excluir?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja realmente excluir?", "CONFIRMAÇÃO", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                usuarioController.Excluir(selecionado.UsuarioId);
-                CarregarGrid();
+                try
+                {
+                    usuarioController.Excluir(selecionado.UsuarioId);
+                    CarregarGrid();
+                    MessageBox.Show("Usuário excluído com sucesso!");
+                }
+                catch (System.Data.SqlClient.SqlException ex) when (ex.Number == 547) //547 = Erro de FKe
+                {
+                    MessageBox.Show(
+                        "Não é possível excluir este usuário, pois ele já está vinculado a um ou mais pedidos.",
+                        "Exclusão Falhou",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro inesperado ao excluir: " + ex.Message, "Erro");
+                }
             }
         }
-
         //botão de seleção
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
@@ -111,8 +130,7 @@ namespace PizzaLink.Views
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            //filtro na mão
-            dgvUsuarios.DataSource = usuarioController.GetByFilter("Nome LIKE '%" + txtPesquisa.Text + "%'");
+            CarregarGrid();
         }
     }
 }

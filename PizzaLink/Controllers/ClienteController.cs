@@ -76,10 +76,8 @@ namespace PizzaLink.Controllers
                 cliente.ClienteId = (int)dataTable.Rows[0]["ClienteId"];
                 cliente.Nome = (string)dataTable.Rows[0]["Nome"];
                 cliente.Telefone = (string)dataTable.Rows[0]["Telefone"];
-
                 cliente.Cpf = dataTable.Rows[0]["Cpf"] == DBNull.Value ? null : (string)dataTable.Rows[0]["Cpf"];
                 cliente.Endereco = dataTable.Rows[0]["Endereco"] == DBNull.Value ? null : (string)dataTable.Rows[0]["Endereco"];
-
                 return cliente;
             }
             else

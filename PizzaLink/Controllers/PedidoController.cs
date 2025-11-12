@@ -126,7 +126,7 @@ namespace PizzaLink.Controllers
             else
                 return null;
         }
-        //publico, pois sera usado posteriormente em SelecionaPedido
+        //publico (sera usado posteriormente em SelecionaPedido)
         public PedidoCollection GetByFilter(string filtro = "")
         {
             string query = "SELECT * FROM Pedido ";
@@ -181,8 +181,7 @@ namespace PizzaLink.Controllers
 
             return GetByFilter(where);
         }
-
-        //outros filtros
+        #region Outros Filtros
         public PedidoCollection GetByCliente(int clienteId)
         {
             return GetByFilter("ClienteId = " + clienteId);
@@ -195,8 +194,73 @@ namespace PizzaLink.Controllers
         //usado em SelecionaPedido
         public PedidoCollection GetByUsuario(int usuarioId)
         {
-            // o método é um atalho para o GetByFilter
+            //este método é um atalho para o GetByFilter
             return GetByFilter("UsuarioId = " + usuarioId);
         }
+        public PedidoCollection GetByNomeCliente(string nome)
+        {
+            string query =
+                "SELECT P.* FROM Pedido P " +
+                "INNER JOIN Cliente C ON P.ClienteId = C.ClienteId " +
+                "WHERE C.Nome LIKE @Nome";
+
+            SqlCommand command = new SqlCommand(query);
+            command.Parameters.AddWithValue("@Nome", "%" + nome + "%");
+
+            DataTable dataTable = dataBase.GetDataTable(command);
+            PedidoCollection pedidos = new PedidoCollection();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Pedido pedido = new Pedido();
+
+                pedido.PedidoId = (int)row["PedidoId"];
+                pedido.DataHora = (DateTime)row["DataHora"];
+                pedido.ValorTotal = (decimal)row["ValorTotal"];
+                pedido.Status = Convert.ToChar(row["Status"]);
+
+                int usuarioId = (int)row["UsuarioId"];
+                pedido.Usuario = usuarioController.GetById(usuarioId);
+
+                int clienteId = (int)row["ClienteId"];
+                pedido.Cliente = clienteController.GetById(clienteId);
+
+                pedidos.Add(pedido);
+            }
+            return pedidos;
+        }
+        public PedidoCollection GetByNomeUsuario(string nome)
+        {
+            string query =
+                "SELECT P.* FROM Pedido P " +
+                "INNER JOIN Usuario U ON P.UsuarioId = U.UsuarioId " +
+                "WHERE U.Nome LIKE @Nome";
+
+            SqlCommand command = new SqlCommand(query);
+            command.Parameters.AddWithValue("@Nome", "%" + nome + "%");
+
+            DataTable dataTable = dataBase.GetDataTable(command);
+            PedidoCollection pedidos = new PedidoCollection();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Pedido pedido = new Pedido();
+
+                pedido.PedidoId = (int)row["PedidoId"];
+                pedido.DataHora = (DateTime)row["DataHora"];
+                pedido.ValorTotal = (decimal)row["ValorTotal"];
+                pedido.Status = Convert.ToChar(row["Status"]);
+
+                int usuarioId = (int)row["UsuarioId"];
+                pedido.Usuario = usuarioController.GetById(usuarioId);
+
+                int clienteId = (int)row["ClienteId"];
+                pedido.Cliente = clienteController.GetById(clienteId);
+
+                pedidos.Add(pedido);
+            }
+            return pedidos;
+        }
+        #endregion
     }
 }

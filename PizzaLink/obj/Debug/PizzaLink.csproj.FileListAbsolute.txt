@@ -36,3 +36,5 @@ C:\Users\Usuário\Desktop\PizzaLink\PizzaLink\obj\Debug\PizzaLink.exe
 C:\Users\Usuário\Desktop\PizzaLink\PizzaLink\obj\Debug\PizzaLink.pdb
 C:\Users\Usuário\Desktop\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmPedidoDetalhes.resources
 C:\Users\Usuário\Desktop\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmSelecionaPedido.resources
+C:\Users\Matheus\Desktop\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmPedidoDetalhes.resources
+C:\Users\Matheus\Desktop\PizzaLink\PizzaLink\obj\Debug\PizzaLink.Views.frmSelecionaPedido.resources

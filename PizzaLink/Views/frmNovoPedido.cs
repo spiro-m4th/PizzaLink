@@ -23,8 +23,9 @@ namespace PizzaLink.Views
         public frmNovoPedido()
         {
             InitializeComponent();
-            dgvItensPedido.AutoGenerateColumns = true;
+            dgvItensPedido.AutoGenerateColumns = false;
         }
+        #region Carregar Propriedade
         private object CarregarPropriedade(object propriedade, string nomeDaPropriedade)
         {
             try
@@ -87,6 +88,7 @@ namespace PizzaLink.Views
                 MessageBox.Show(ex.Message, "Atenção...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        #endregion
 
         //método de pesquisa
         private void PesquisarCliente()
@@ -340,7 +342,13 @@ namespace PizzaLink.Views
 
         private void frmNovoPedido_Load(object sender, EventArgs e)
         {
+        }
 
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja sair da tela de pedidos?", "CONFIRMAÇÃO", MessageBoxButtons.YesNo);
+            if(dialogResult == DialogResult.Yes)
+            this.Close();
         }
     }
 }

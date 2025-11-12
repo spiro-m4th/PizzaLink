@@ -35,6 +35,7 @@ namespace PizzaLink.Views
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            if(MessageBox.Show("Deseja Cancelar?", "CONFIRMAÇÃO", MessageBoxButtons.YesNo) == DialogResult.Yes)
             this.Close();
         }
 

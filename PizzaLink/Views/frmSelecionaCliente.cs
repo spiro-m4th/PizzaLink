@@ -1,7 +1,8 @@
-﻿using PizzaLink.Controllers;
-using PizzaLink.Models;
-using System;
+﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+using PizzaLink.Controllers;
+using PizzaLink.Models;
 
 namespace PizzaLink.Views
 {
@@ -15,6 +16,7 @@ namespace PizzaLink.Views
         {
             InitializeComponent();
             this.emSelecao = emSelecao;
+            //vou deixar o GenerateColumns como true pois é uma grid de um objeto com atributos simples
             dgvClientes.AutoGenerateColumns = true;
         }
 
@@ -80,10 +82,32 @@ namespace PizzaLink.Views
             Cliente selecionado = GetSelecionado();
             if (selecionado == null) return;
 
-            if (MessageBox.Show("Deseja realmente excluir?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja realmente excluir este registro?", "CONFIRMAÇÃO", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                clienteController.Excluir(selecionado.ClienteId);
-                CarregarGrid();
+                try
+                {
+                    //Tenta excluir
+                    if (clienteController.Excluir(selecionado.ClienteId) > 0)
+                    {
+                        MessageBox.Show("Cliente excluído com sucesso!");
+                        CarregarGrid(); //Atualiza a grid
+                    }
+                }
+                catch (SqlException ex) when (ex.Number == 547) // 547 = Erro de FK
+                {
+                    //mensagem de erro decorrente de um teste que deu errado.
+                    //deu errado excluir um cliente que possui um pedido ja cadastrado
+                    MessageBox.Show(
+                        "Não é possível excluir este cliente pois ele já possui pedidos cadastrados no histórico.",
+                        "Exclusão Falhou",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro inesperado ao excluir: " + ex.Message, "ERRO");
+                }
             }
         }
 

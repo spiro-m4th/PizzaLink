@@ -38,11 +38,16 @@ namespace PizzaLink.Controllers
         //define o comando, os parametros e executa retornando as linhas afetadas
         public int Alterar(Usuario usuario)
         {
+            //modo alterar nao deve mexer na senha
+            //a nao ser que seja implementado um sistema de administracao
+            //mais robusto, com permissoes de tipos de usuario (isto ja foi implementado
+            //neste programa, so faltou implementar mais funcionalidades para que apenas
+            //administradores possam alterar senhas e usuarios (funcionario) comuns nao possam alterar
+            //os usuarios)
             string query =
                 "UPDATE Usuario SET " +
                 "Nome = @Nome, " +
                 "Login = @Login, " +
-                "Senha = @Senha, " +
                 "NivelAcesso = @NivelAcesso " +
                 "WHERE UsuarioId = @UsuarioId";
 
@@ -50,7 +55,6 @@ namespace PizzaLink.Controllers
 
             command.Parameters.AddWithValue("@Nome", usuario.Nome);
             command.Parameters.AddWithValue("@Login", usuario.Login);
-            command.Parameters.AddWithValue("@Senha", usuario.Senha);
             command.Parameters.AddWithValue("@NivelAcesso", usuario.NivelAcesso);
             command.Parameters.AddWithValue("@UsuarioId", usuario.UsuarioId);
 
@@ -98,7 +102,7 @@ namespace PizzaLink.Controllers
                 usuario.UsuarioId = (int)dataTable.Rows[0]["UsuarioId"];
                 usuario.Nome = (string)dataTable.Rows[0]["Nome"];
                 usuario.Login = (string)dataTable.Rows[0]["Login"];
-                //por boas práticas e segurança, não retornar a senha
+                //por boas práticas e segurança, não retornar a senha              
                 usuario.NivelAcesso = Convert.ToChar(dataTable.Rows[0]["NivelAcesso"]);
 
                 return usuario;

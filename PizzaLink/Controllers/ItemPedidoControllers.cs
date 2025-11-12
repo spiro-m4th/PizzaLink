@@ -21,7 +21,6 @@ namespace PizzaLink.Controllers
             SqlCommand command = new SqlCommand(query);
 
             command.Parameters.AddWithValue("@PedidoId", itemPedido.PedidoId);
-
             command.Parameters.AddWithValue("@ProdutoId", itemPedido.Produto.ProdutoId);
             command.Parameters.AddWithValue("@Quantidade", itemPedido.Quantidade);
             command.Parameters.AddWithValue("@PrecoUnitario", itemPedido.PrecoUnitario);

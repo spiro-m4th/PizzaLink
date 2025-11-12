@@ -42,31 +42,46 @@ namespace PizzaLink.Views
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Deseja Cancelar?", "CONFIRMAÇÃO", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                this.Close();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtPreco.Text))
+            //validacoes
+            if (string.IsNullOrWhiteSpace(txtNome.Text))
             {
-                MessageBox.Show("Os campos Nome e Preço são obrigatórios.");
+                MessageBox.Show("O campo Nome é obrigatório.");
+                txtNome.Focus();
                 return;
             }
+            if (!decimal.TryParse(txtPreco.Text, out decimal preco))
+            {
+                MessageBox.Show("O formato do Preço está incorreto. Use apenas números (ex: 10,50).");
+                txtPreco.Focus();
+                return;
+            }
+            if (!int.TryParse(txtEstoque.Text, out int estoque))
+            {
+                estoque = 0;
+            }
 
+            //preenchendo objeto com os dados validados
             Produto produto = new Produto();
             produto.Nome = txtNome.Text.Trim();
-            produto.Preco = Convert.ToDecimal(txtPreco.Text);
-            produto.Estoque = Convert.ToInt32(txtEstoque.Text);
+            produto.Preco = preco; 
+            produto.Estoque = estoque;
 
             if (cbxTipo.SelectedIndex == 0)
             {
-                MessageBox.Show("Preencha corretamente o tipo de produto","ERRO", MessageBoxButtons.OK);
+                MessageBox.Show("Preencha corretamente o tipo de produto", "ERRO", MessageBoxButtons.OK);
                 return;
             }
             else if (cbxTipo.SelectedIndex == 1) produto.Tipo = 'P';
             else if (cbxTipo.SelectedIndex == 2) produto.Tipo = 'B';
             else produto.Tipo = 'L';
 
+            //salvar no banco
             try
             {
                 if (this.produtoId == 0)

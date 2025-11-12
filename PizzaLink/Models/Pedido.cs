@@ -16,7 +16,7 @@ namespace PizzaLink.Models
         //vai guardar os itens antes de salvar no banco
         public List<ItemPedido> ItensDoPedido { get; set; }
 
-        //inicializar a lista
+        //iniciar a lista
         public Pedido()
         {
             this.ItensDoPedido = new List<ItemPedido>();

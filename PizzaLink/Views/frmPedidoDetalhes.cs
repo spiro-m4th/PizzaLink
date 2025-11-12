@@ -18,15 +18,9 @@ namespace PizzaLink.Views
 
             this.pedidoSelecionado = pedido;
 
-            dgvItensPedido.AutoGenerateColumns = false;
-            //nomeando as colunas seguindo o padrao utilizado em frmSelecionaPedido
-            colProdutoId.DataPropertyName = "Produto.ProdutoId"; 
-            colProdutoNome.DataPropertyName = "Produto.Nome";
-            colQuantidade.DataPropertyName = "Quantidade";
-            colPrecoUnitario.DataPropertyName = "PrecoUnitario";
-            colSubtotal.DataPropertyName = "Subtotal";            
+            dgvItensPedido.AutoGenerateColumns = false;           
         }
-
+        #region Carregar Propriedade
         private object CarregarPropriedade(object propriedade, string nomeDaPropriedade)
         {
             try
@@ -70,14 +64,15 @@ namespace PizzaLink.Views
                 return null;
             }
         }
-
         private void dgvItensPedido_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             try
             {
+                // Padrão 2: Verifica se a linha não é nula e se a coluna é aninhada
                 if ((dgvItensPedido.Rows[e.RowIndex].DataBoundItem != null) &&
                     (dgvItensPedido.Columns[e.ColumnIndex].DataPropertyName.Contains(".")))
                 {
+                    // Se sim, chama o Reflection para buscar o valor
                     e.Value = CarregarPropriedade(dgvItensPedido.Rows[e.RowIndex].DataBoundItem,
                         dgvItensPedido.Columns[e.ColumnIndex].DataPropertyName);
                 }
@@ -87,7 +82,7 @@ namespace PizzaLink.Views
                 MessageBox.Show(ex.Message, "Atenção...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
+        #endregion
         private void frmPedidoDetalhes_Load(object sender, EventArgs e)
         {
             //iniciar com o metodo de carregar os dados na tela
@@ -118,7 +113,10 @@ namespace PizzaLink.Views
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Deseja fechar?", "CONFIRMAÇÃO", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             this.Close();
         }
+
     }
 }
